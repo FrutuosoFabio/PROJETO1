@@ -16,4 +16,4 @@ Route::get('/', function () {
 });
 
 
-Route::resource('cliente', 'ClienteControlador');
+Route::resource('clientes', 'ClienteControlador');

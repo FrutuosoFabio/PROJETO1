@@ -6,16 +6,25 @@ use Illuminate\Http\Request;
 
 class ClienteControlador extends Controller
 {
+private $clientes=[
+    ['id'=>1,'nome'=>'ademir'],
+    ['id'=>2,'nome'=>'dex'],
+    ['id'=>3,'nome'=>'joão'],
+    ['id'=>4,'nome'=>'jovem'],
+];
+
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //
-    }
+   {
+$clientes=$this->clientes;       
+return view('clientes.index',compact(['clientes']));
 
+   }
     /**
      * Show the form for creating a new resource.
      *
@@ -23,6 +32,7 @@ class ClienteControlador extends Controller
      */
     public function create()
     {
+        return view('clientes.create');
         //
     }
 
@@ -34,7 +44,13 @@ class ClienteControlador extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $id= count($this->clientes)+1; 
+      $nome=$request->nome; 
+      $dados = ["id"=>$id,"nome"=>$nome];
+      $this->clientes[]=$dados;
+     
+      $clientes=$this->clientes;
+      return view('clientes.index',compact(['clientes']));
     }
 
     /**
