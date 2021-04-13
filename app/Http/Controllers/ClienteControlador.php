@@ -12,7 +12,12 @@ private $clientes=[
     ['id'=>3,'nome'=>'joão'],
     ['id'=>4,'nome'=>'jovem'],
 ];
-
+public function __construct(){
+ $clientes=session('clientes');
+ if(!isset($clientes))
+ session(['clientes'=>$this->clientes]);
+    
+}
 
     /**
      * Display a listing of the resource.
@@ -21,7 +26,7 @@ private $clientes=[
      */
     public function index()
    {
-$clientes=$this->clientes;       
+$clientes=session('clientes');       
 return view('clientes.index',compact(['clientes']));
 
    }
@@ -44,13 +49,15 @@ return view('clientes.index',compact(['clientes']));
      */
     public function store(Request $request)
     {
-      $id= count($this->clientes)+1; 
+      $clientes=session('clientes') ; 
+      $id=count($clientes) +1; 
       $nome=$request->nome; 
       $dados = ["id"=>$id,"nome"=>$nome];
-      $this->clientes[]=$dados;
+      session(['clientes'=>$clientes]);
+      $clientes[]=$dados;
      
       $clientes=$this->clientes;
-      return view('clientes.index',compact(['clientes']));
+      return redirect()->route('clientes.index');
     }
 
     /**
@@ -61,6 +68,10 @@ return view('clientes.index',compact(['clientes']));
      */
     public function show($id)
     {
+        $clientes=session('clientes');
+        $cliente=$clientes[$id - 1];
+        return view('clientes.info',compact(['cliente']));
+        
         //
     }
 
