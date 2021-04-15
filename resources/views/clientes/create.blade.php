@@ -1,3 +1,6 @@
+@extends('layouts.principal')
+@section('conteudo')
+    
 <h3>Novo cliente</h3>
 
 
@@ -6,3 +9,4 @@
     <input type="text" name="nome">
     <input type="submit" value="Salvar">
 </form>
+@endsection

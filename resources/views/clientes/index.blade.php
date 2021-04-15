@@ -1,3 +1,6 @@
+@extends('layouts.principal')
+@section('conteudo')
+    
 <h3>clientes:</h3>
 <a href="{{route('clientes.create',)}}">Novo Cliente</a>
 <ul>
@@ -19,6 +22,7 @@
 
         </li>
     @endforeach
+    @endsection
 
-
+    
 </ul>
