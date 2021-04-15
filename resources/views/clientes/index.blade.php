@@ -22,7 +22,24 @@
 
         </li>
     @endforeach
+</ul>
+@else 
+
+
+<h4>não existem clientes cadastrados</h4>
+
+
+
+
+
+
+
+
+
+
+
+
     @endsection
 
     
-</ul>
+
