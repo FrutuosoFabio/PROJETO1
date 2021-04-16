@@ -11,6 +11,25 @@
 
 
 </ul>
+@component('componentes.alerta',['titulo'=>'Erro fatal'])
+<p> <strong> Erro Inesperado</strong></p>
+<p>Ocorreu um erro Inesperado</p>
+@endcomponent
 
+@component('componentes.alerta',['titulo'=>'Erro fatal'])
+<p> <strong> Erro Inesperado</strong></p>
+<p>Ocorreu um erro Inesperado</p>
+@endcomponent
+
+
+@component('componentes.alerta',['titulo'=>'Erro fatal'])
+<p> <strong> Erro Inesperado</strong></p>
+<p>Ocorreu um erro Inesperado</p>
+@endcomponent
+
+@component('componentes.alerta',['titulo'=>'Erro fatal'])
+<p> <strong> Erro Inesperado</strong></p>
+<p>Ocorreu um erro Inesperado</p>
+@endcomponent
 
 @endsection
