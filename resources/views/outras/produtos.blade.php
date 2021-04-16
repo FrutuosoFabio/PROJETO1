@@ -1,5 +1,5 @@
 @extends('layouts.principal')
-
+@section('titulo','Clientes-Produtos')
 @section('conteudo')
     <h3>Departamentos</h3>
 <ul>

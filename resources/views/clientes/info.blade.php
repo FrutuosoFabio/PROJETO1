@@ -1,6 +1,6 @@
 @extends('layouts.principal')
 @section('conteudo')
-    
+@section('titulo','Clientes-Informações')
 <h3>Informações do Cliente</h3>
 
 <p>ID: {{$cliente['id']}}</p>
