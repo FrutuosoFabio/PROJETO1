@@ -3,12 +3,16 @@
 @section('conteudo')
 <div class="options">
     <ul>
-        <li><a class="warning"   href="{{ route('opcoes',1)}}">warning</a></li>
-        <li><a class="info"   href="{{ route('opcoes',2)}}"> info</a></li>
-        <li><a class="success"   href="{{ route('opcoes',3)}}"> sucess</a></li>
-        <li><a class="error"    href="{{ route('opcoes',4)}}"> error</a></li>
+        <li><a class="warning {{request()->routeIs('opcoes',1)? 'selected' :''}} "   href="{{ route('opcoes',1)}}">warning</a></li>
+        <li><a class="info 
+            {{request()->routeIs('opcoes',2)? 'selected' :''}}"   href="{{ route('opcoes',2)}}"> info</a></li>
+        <li><a class="success  
+            {{request()->routeIs('opcoes',3)? 'selected' :''}}"   href="{{ route('opcoes',3)}}"> sucess</a></li>
+        <li><a class="error 
+            {{request()->routeIs('opcoes',4)? 'selected' :''}}"    href="{{ route('opcoes',4)}}"> error</a></li>
     </ul>
 </div>
+
     @if(isset($opcao))
 
     @switch($opcao)
