@@ -1,6 +1,8 @@
 @extends('layouts.principal')
 @section('titulo','Departamentos')
 @section('conteudo')
+
+
     <h3>Departamentos</h3>
 <ul>
 <li>Compoutadores</li>
@@ -11,25 +13,32 @@
 
 
 </ul>
-@component('componentes.alerta',['titulo'=>'Erro fatal'])
+@alerta(['titulo'=>'Erro fatal','tipo'=>'info'])
 <p> <strong> Erro Inesperado</strong></p>
 <p>Ocorreu um erro Inesperado</p>
-@endcomponent
 
-@component('componentes.alerta',['titulo'=>'Erro fatal'])
+@endalerta
+
+@alerta(['titulo'=>'Erro fatal','tipo'=>'error'])
 <p> <strong> Erro Inesperado</strong></p>
 <p>Ocorreu um erro Inesperado</p>
-@endcomponent
+
+@endalerta
 
 
-@component('componentes.alerta',['titulo'=>'Erro fatal'])
+@alerta(['titulo'=>'Erro fatal','tipo'=>'sucess'])
 <p> <strong> Erro Inesperado</strong></p>
 <p>Ocorreu um erro Inesperado</p>
-@endcomponent
 
-@component('componentes.alerta',['titulo'=>'Erro fatal'])
+@endalerta
+
+@alerta(['titulo'=>'Erro fatal','tipo'=>'warning'])
 <p> <strong> Erro Inesperado</strong></p>
 <p>Ocorreu um erro Inesperado</p>
-@endcomponent
+
+
+@endalerta
+
+
 
 @endsection
