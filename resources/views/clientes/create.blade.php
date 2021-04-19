@@ -2,7 +2,7 @@
 @section('conteudo')
 @section('titulo','Clientes-Criar')
     
-@endsection
+
     
 <h3>Novo cliente</h3>
 
