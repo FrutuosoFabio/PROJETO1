@@ -3,13 +3,13 @@
 @section('conteudo')
 <div class="options">
     <ul>
-        <li><a class="warning {{request()->routeIs('opcoes.1',)? '' :''}} "   href="{{ route('opcoes',1)}}">warning</a></li>
+        <li><a class="warning {{request()->Is('opcoes/1')? 'selected' :''}} "   href="{{ route('opcoes',1)}}">warning</a></li>
         <li><a class="info 
-            {{request()->routeIs('opcoes.2')? 'selected' :''}}"   href="{{ route('opcoes',2)}}"> info</a></li>
+            {{request()->Is('opcoes/2')? 'selected' :''}}"   href="{{ route('opcoes',2)}}"> info</a></li>
         <li><a class="success  
-            {{request()->routeIs('opcoes.3',)? 'selected' :''}}"   href="{{ route('opcoes',3)}}"> sucess</a></li>
+            {{request()->Is('opcoes/3')? 'selected' :''}}"   href="{{ route('opcoes',3)}}"> sucess</a></li>
         <li><a class="error 
-            {{request()->routeIs('opcoes',)? 'selected' :''}}"    href="{{ route('opcoes',4)}}"> error</a></li>
+            {{request()->Is('opcoes/4')? 'selected' :''}}"    href="{{ route('opcoes',4)}}"> error</a></li>
     </ul>
 </div>
 
